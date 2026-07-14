@@ -13,7 +13,7 @@
     "url": "https://github.com/shipany-ai/open-agent-sdk/issues"
   },
   "version": "0.1.7",
-  "description": "Open-source Agent SDK inspired by @anthropic-ai/claude-agent-sdk. Runs the agent loop in-process — no local CLI required. Deploy anywhere: cloud, serverless, Docker, CI/CD.",
+  "description": "Open-source Agent SDK inspired by @anthropic-ai/claude-agent-sdk. Runs the agent loop in-process \u2014 no local CLI required. Deploy anywhere: cloud, serverless, Docker, CI/CD.",
   "type": "module",
   "main": "./dist/sdk.js",
   "types": "./dist/sdk.d.ts",
@@ -32,9 +32,9 @@
     "codeany": "./cli.mjs"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "node api.js && tsc",
     "build:cli": "node build.mjs",
-    "dev": "bun run src/entrypoints/cli.tsx",
+    "dev": "node api.js && bun run src/entrypoints/cli.tsx",
     "dev:watch": "tsc --watch",
     "test": "node --experimental-vm-modules node_modules/.bin/vitest run",
     "lint": "tsc --noEmit",
